@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="flex justify-center flex-col text-center max-w-[100%] ml-auto mr-auto bg-neutral-400 h-[100vh]">
-      <div className='text-4xl text-white mb-[2rem] font-shadow'>To Commit To Quit</div>
+      <div className='text-8xl text-white mb-[1rem] font-modak font-normal'>To Commit To Quit</div>
 
       <div className="text-white">
         Are you sick and tired of generating commit messages? Just click
@@ -49,12 +49,12 @@ function App() {
         git commit -m '{commitMsg}'
       </code>
 
-      {handleTextCopyClick ? <div> Copied to Clipboard!</div> : <></>}
+      {handleTextCopyClick ? <div className="bg-neutral-700 w-max ml-auto mr-auto mb-[1rem] p-[1rem] rounded-sm text-white animate-slide"> Copied to Clipboard!</div> : <></>}
 
       <Button
         onClick={handleClick}
-        variant="default"
-        className="w-[10%] ml-auto mr-auto"
+        variant="defaultOpt2"
+        className="md:w-[20%] w-[80%] ml-auto mr-auto"
       >
         Generate
       </Button>

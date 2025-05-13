@@ -1,14 +1,27 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@600&family=Shadows+Into+Light&display=swap');
+@import 'tailwindcss';
 
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-shadow: "Shadows Into Light", Arial;
-  --font-lexend: "Lexend Tera", sans-serif;
+  --font-modak: "Modak", system-ui;
+
+  --animate-slide: slide 500ms ease 0s 1 normal forwards;
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 body {
