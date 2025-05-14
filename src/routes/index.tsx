@@ -37,24 +37,25 @@ function App() {
     <div className="flex justify-center flex-col text-center max-w-[100%] ml-auto mr-auto bg-neutral-400 h-[100vh]">
       <div className='text-8xl text-white mb-[1rem] font-modak font-normal'>To Commit To Quit</div>
 
-      <div className="text-white">
-        Are you sick and tired of generating commit messages? Just click
-        "generate", then copy and paste!
+      <div className="text-white text-xl pl-[3rem] pr-[3rem]">
+        Are you sick and tired of generating commit messages?<br />Just click "generate", then copy and paste!
       </div>
 
       <code
         onClick={copyTextToClipboard}
-        className="bg-neutral-700 flex text-white mb-[1rem] mt-[1rem] max-w-[60%] justify-center rounded-sm p-[0.5rem] align-middle ml-auto mr-auto cursor-pointer"
+        className="bg-neutral-700 flex text-white mb-[1rem] mt-[1rem] max-w-[60%] justify-center rounded-sm p-[0.5rem] align-middle ml-auto mr-auto cursor-pointer shadow-md"
+        aria-label={`git commit -m '${commitMsg}'`}
       >
         git commit -m '{commitMsg}'
       </code>
 
-      {handleTextCopyClick ? <div className="bg-neutral-700 w-max ml-auto mr-auto mb-[1rem] p-[0.5rem] rounded-sm text-white animate-slide"> Copied to Clipboard!</div> : <></>}
+      {handleTextCopyClick ? <div aria-label="Copied to Clipboard!" className="bg-neutral-700 w-max ml-auto mr-auto mb-[1rem] p-[0.5rem] rounded-sm text-white animate-slide"> Copied to Clipboard!</div> : <></>}
 
       <Button
         onClick={handleClick}
         variant="defaultOpt2"
-        className="md:w-[20%] w-[80%] ml-auto mr-auto"
+        className="md:w-auto w-[80%] ml-auto mr-auto"
+        aria-label="Generate"
       >
         Generate
       </Button>
