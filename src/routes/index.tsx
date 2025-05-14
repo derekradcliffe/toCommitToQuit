@@ -49,7 +49,7 @@ function App() {
         git commit -m '{commitMsg}'
       </code>
 
-      {handleTextCopyClick ? <div className="bg-neutral-700 w-max ml-auto mr-auto mb-[1rem] p-[1rem] rounded-sm text-white animate-slide"> Copied to Clipboard!</div> : <></>}
+      {handleTextCopyClick ? <div className="bg-neutral-700 w-max ml-auto mr-auto mb-[1rem] p-[0.5rem] rounded-sm text-white animate-slide"> Copied to Clipboard!</div> : <></>}
 
       <Button
         onClick={handleClick}
