@@ -54,7 +54,7 @@ function App() {
       <Button
         onClick={handleClick}
         variant="defaultOpt2"
-        className="md:w-auto w-[80%] ml-auto mr-auto"
+        className="md:w-auto w-[80%] ml-auto mr-auto font-bold"
         aria-label="Generate"
       >
         Generate
